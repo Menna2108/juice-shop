@@ -6,13 +6,13 @@ jobs:
   generate-sbom:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     - name: Install CycloneDX
       run: npm install -g @cyclonedx/cyclonedx-npm
     - name: Generate SBOM
       run: cyclonedx-npm --output-file sbom.json
     - name: Upload SBOM
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
       with:
         name: sbom
         path: sbom.json
