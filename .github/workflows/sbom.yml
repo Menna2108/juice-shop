@@ -13,6 +13,8 @@ jobs:
         node-version: '18'
     - name: Install dependencies
       run: npm install --legacy-peer-deps
+    - name: Install eslint-plugin-n
+      run: npm install --save-dev eslint-plugin-n@^16.0.0
     - name: Install CycloneDX
       run: npm install -g @cyclonedx/cyclonedx-npm
     - name: Generate SBOM
