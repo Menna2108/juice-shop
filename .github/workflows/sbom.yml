@@ -1,7 +1,7 @@
 name: Generate SBOM
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 jobs:
   generate-sbom:
     runs-on: ubuntu-latest
